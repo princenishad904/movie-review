@@ -1,0 +1,78 @@
+@import "keep-react/css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  :root {
+    --activeColor: rgb(0, 255, 242);
+  }
+  .scroll-styled::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgb(88, 88, 88);
+  }
+  .scroll-styled::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+  .scroll-styled::-webkit-scrollbar-thumb {
+    background: rgba(221, 221, 221, 0.678);
+    border-radius: 10px;
+  }
+  .horizantalScroll::-webkit-scrollbar {
+    width: 0px;
+    background-color: transparent;
+  }
+  .horizantalScroll::-webkit-scrollbar-track {
+    border-radius: 0px;
+  }
+  .horizantalScroll::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 0px;
+  }
+  .mybgColor {
+    background-color: #0f172aec;
+  }
+
+  .center-div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+  }
+
+  .adminSidebar {
+    height: calc(100vh - 48px);
+  }
+
+  .filmUpdateBtn {
+    display: none;
+  }
+  .showFilmUpdateBtn:hover .filmUpdateBtn {
+    display: block;
+    transition: 0.2s;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .myCollapse {
+      margin-left: -240px;
+      transition: 0.2s;
+    }
+    .myCollapseClose {
+      margin-left: 0;
+      transition: 0.2s;
+    }
+  }
+
+  .onActive {
+    background: linear-gradient(
+      to top,
+      rgba(0, 225, 255, 0.158),
+      rgba(0, 0, 0, 0.13),
+      rgba(0, 225, 255, 0.158)
+    );
+
+    border-top: 1px solid cyan;
+    border-bottom: 1px solid cyan;
+    color: var(--activeColor);
+  }
+}
