@@ -15,24 +15,17 @@ const MenuBar = ({ toggle }) => {
           <li className="inline-block max-lg:block p-1 onActive mx-1">Home</li>
         </NavLink>
 
-        <NavLink to={"/trending-movies"}>
-          <li className="inline-block max-lg:block p-1 mx-1">
-            Trending Movies
-          </li>
-        </NavLink>
-        <NavLink to={"/contact"}>
-          <li className="inline-block max-lg:block p-1 mx-1">Contact</li>
-        </NavLink>
-
-        <NavLink to={"/about"}>
-          <li className="inline-block max-lg:block p-1 mx-1">About</li>
+        <NavLink to={"/all-movies"}>
+          <li className="inline-block max-lg:block p-1 mx-1">All Movies</li>
         </NavLink>
 
         {isLoggedIn ? (
           <NavLink to={"/admin"}>
             <li className="inline-block max-lg:block p-1 mx-1">Dashboard</li>
           </NavLink>
-        ) : null}
+        ) : (
+          <NavLink to={"/login"}>Login</NavLink>
+        )}
       </ul>
     </div>
   );

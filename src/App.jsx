@@ -2,7 +2,7 @@ import MovieProvider from "./context/MovieProvider";
 import BackgroundStyle from "./BackgroundStyle/BackgroundStyle";
 import Home from "./Pages/Home";
 import { Routes, Route } from "react-router-dom";
-import Contact from "./Pages/Contact";
+
 import TrendingMovie from "./Pages/TrendingMovie";
 import Category from "./Pages/Category";
 import "@fontsource/roboto/300.css";
@@ -22,15 +22,13 @@ function App() {
         <MovieProvider>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/trending-movies" element={<TrendingMovie />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/all-movies" element={<TrendingMovie />} />
             <Route path="/login" element={<AdminLogin />} />
             <Route path="/admin" element={<Protected ProtectRoute={Admin} />} />
             <Route
               path="/upload-new-movie"
               element={<Protected ProtectRoute={UploadMovie} />}
             />
-
             <Route path="/movies/:type" element={<Category />} />
             <Route path="/movie/:id" element={<MovieDetails />} />
           </Routes>

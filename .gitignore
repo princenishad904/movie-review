@@ -12,7 +12,7 @@ dist
 dist-ssr
 *.local
 src/Firebase
-src/Admin/AdminComponents/Database.js
+
 postcss.config.js
 vite.config.js
 

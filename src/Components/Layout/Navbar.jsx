@@ -16,7 +16,7 @@ const Navbar = () => {
             <PiFilmSlateLight />
           </h2>
         </div>
-        <SearchBar />
+        {/* <SearchBar /> */}
         <MenuBar toggle={sidebar} />
         <button
           onClick={() => setSidebar(!sidebar)}

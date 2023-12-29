@@ -15,6 +15,7 @@ const AdminLogin = () => {
   let [email, setEmail] = useState("");
   let [password, setPassword] = useState("");
   const [loginSpinner, setLoginSpinner] = useState("Login");
+  const [invalid, setInvalid] = useState(null);
 
   const signIn = (e) => {
     setLoginSpinner(
@@ -32,10 +33,12 @@ const AdminLogin = () => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
       .then((res) => {
+        setInvalid(null);
         navigate("/admin");
       })
       .catch((error) => {
-        console.log(error);
+        setLoginSpinner("Login");
+        setInvalid("Invalid email or password");
       });
   };
   return (
@@ -44,6 +47,8 @@ const AdminLogin = () => {
         <div className="w-96">
           <form onSubmit={signIn}>
             <h2 className="text-2xl pb-5">Login To Dashboard</h2>
+
+            <span className="text-red-500">{invalid}</span>
             <div className="my-4">
               <label htmlFor="email">Email</label> <br />
               <input

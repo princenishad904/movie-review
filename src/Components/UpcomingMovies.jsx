@@ -4,8 +4,6 @@ import useFetch from "../Admin/AdminComponenets/Database";
 const UpcomingMovies = () => {
   const [comingSoon] = useFetch("upcoming_movies");
 
-  console.log(comingSoon);
-
   return (
     <>
       {comingSoon.map((soon) => {
