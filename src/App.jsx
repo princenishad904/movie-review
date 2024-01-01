@@ -1,8 +1,9 @@
+import React from "react";
 import MovieProvider from "./context/MovieProvider";
 import BackgroundStyle from "./BackgroundStyle/BackgroundStyle";
+
 import Home from "./Pages/Home";
 import { Routes, Route } from "react-router-dom";
-
 import TrendingMovie from "./Pages/TrendingMovie";
 import Category from "./Pages/Category";
 import "@fontsource/roboto/300.css";

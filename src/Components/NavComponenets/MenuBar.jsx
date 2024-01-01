@@ -24,7 +24,10 @@ const MenuBar = ({ toggle }) => {
             <li className="inline-block max-lg:block p-1 mx-1">Dashboard</li>
           </NavLink>
         ) : (
-          <NavLink to={"/login"}>Login</NavLink>
+          <NavLink to={"/login"}>
+            {" "}
+            <li className="inline-block max-lg:block p-1 mx-1">Login</li>
+          </NavLink>
         )}
       </ul>
     </div>
